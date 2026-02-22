@@ -1,4 +1,23 @@
 services:
+
+  # api:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: api_integration_hub
+  #   ports:
+  #     - "8080:8080"
+  #   environment:
+  #     - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/integration_db
+  #     - SPRING_RABBITMQ_HOST=rabbitmq
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #     rabbitmq:
+  #       condition: service_healthy
+  #   networks:
+  #     - integration_network
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rmq_integration_hub
